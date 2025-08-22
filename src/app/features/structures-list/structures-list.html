@@ -1,0 +1,43 @@
+<h2>Tableau des structures</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Email</th>
+      <th>Teléphone</th>
+      <th>NuméroIdentificationUnique</th>
+      <th>Adresse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- @for (s of structures; track $index) {
+      <tr>
+        <td>{{ s.nom }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.telephone }}</td>
+           <td>{{ s.numeroIdentificationUnique }}</td>
+        <td>{{ s.adresse }}</td>
+      </tr>
+    
+    } -->
+      <tr *ngFor="let s of structures; let i = index; trackBy: trackByIndex">
+  <td>{{ s.nom }}</td>
+  <td>{{ s.email }}</td>
+  <td>{{ s.telephone }}</td>
+  <td>{{ s.numeroIdentificationUnique }}</td>
+  <td>{{ s.adresse }}</td>
+</tr>
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<form #siteForm="ngForm" (ngSubmit)="onSubmit(siteForm)">
+
+<h2>Création du site</h2>
+
+
+  <div>
+    <label>StructureId :</label>
+    <input type="text" name="StructureId" ngModel required>
+  </div>
+
+
+  <div>
+    <label>Nom du site :</label>
+    <input type="text" name="nom" ngModel required>
+  </div>
+
+
+  <div>
+    <label>Adresse :</label>
+    <input type="text" name="adresse" ngModel required>
+  </div>
+
+ 
+  <div>
+    <label>Ville :</label>
+    <input type="text" name="Ville" ngModel required>
+  </div>
+
+  <div>
+    <label>Pays :</label>
+    <input type="text" name="Pays" ngModel required>
+  </div>
+
+  <button type="submit" [disabled]="!siteForm.valid">
+          Ajouter le site
+  </button>
+</form>
+
+<hr>
+
+
+
+
+
