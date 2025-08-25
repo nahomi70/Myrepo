@@ -1,0 +1,21 @@
+<h3>Liste des sites :</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Adresse</th>
+        <th>Ville</th>
+        <th>Pays</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of sites; let i = index; trackBy: trackByIndex">
+      <td>{{ s.nom}}</td>
+      <td>{{ s.adresse }}</td>
+       <td>{{ s.ville}}</td>
+        <td>{{ s.pays}}</td>
+
+    </tr>
+  </tbody>
+</table>

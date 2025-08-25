@@ -1,0 +1,23 @@
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="mb-4 text-center">Connexion</h2>
+
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="mb-3">
+      <label for="username" class="form-label">Nom d'utilisateur</label>
+      <input type="text" id="username" name="username" ngModel required class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Mot de passe</label>
+      <input type="password" id="password" name="password" ngModel required class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100" [disabled]="loginForm.invalid">
+      Se connecter
+    </button>
+  </form>
+
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3 text-center">
+    {{ errorMessage }}
+  </div>
+</div>
